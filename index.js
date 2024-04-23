@@ -1,10 +1,13 @@
 require('dotenv').config();
 
+
+
 // set up basic express server
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const emailManager = require('./email-manager');
+const gameManager = require('./game-manager');
 
 // make all files/directories in the public folder accessible
 app.use(express.static('public'));
@@ -18,16 +21,5 @@ app.listen(3000, () => {
 });
 
 
-
-// set up supabase
-const { createClient } = require('@supabase/supabase-js');
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-
-
-// routes
-app.post('/api/send-email', (req, res) => {
-  
-});
+// RUN FUN CODE WITH gameManager HERE!!!
+// gameManager.confirmUser('24lasfir@manistee.org', 'Firstname', 'Lastname');
