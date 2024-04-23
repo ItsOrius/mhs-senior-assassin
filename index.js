@@ -22,4 +22,4 @@ app.listen(3000, () => {
 
 
 // RUN FUN CODE WITH gameManager HERE!!!
-// gameManager.confirmUser('24lasfir@manistee.org', 'Firstname', 'Lastname');
+// gameManager.confirmUser('24lasfir@manistee.org', 'Firstname', 'Lastname', 'color'/*, 'avatarurl.com/img.png'*/);
