@@ -27,6 +27,13 @@ class SupabaseUser {
       this.data = data;
     }
   }
+
+  getData() {
+    if (!this.isLoaded()) {
+      throw new Error('Data not loaded');
+    }
+    return this.data;
+  }
 }
 
 class SupabaseElimination {
@@ -50,6 +57,13 @@ class SupabaseElimination {
     } else {
       this.data = data;
     }
+  }
+
+  getData() {
+    if (!this.isLoaded()) {
+      throw new Error('Data not loaded');
+    }
+    return this.data;
   }
 }
 
